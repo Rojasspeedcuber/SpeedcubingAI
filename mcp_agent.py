@@ -11,7 +11,7 @@ from prompts import AGENT_SYSTEM_PROMPT
 
 async def main():
     memory = MemorySaver()
-    model = ChatOpenAI(model='gpt-4o-mini')
+    model = ChatOpenAI(model='gpt-5-mini')
 
     mcp_client = MultiServerMCPClient(MCP_SERVERS_CONFIG)
     tools = await mcp_client.get_tools()
