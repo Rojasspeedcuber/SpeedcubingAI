@@ -4,10 +4,11 @@ from langchain_mcp_adapters.client import MultiServerMCPClient
 from langchain_openai import ChatOpenAI
 from langgraph.checkpoint.memory import MemorySaver
 from langgraph.prebuilt import create_react_agent
-
+from dotenv import load_dotenv
 from mcp_servers import MCP_SERVERS_CONFIG
 from prompts import AGENT_SYSTEM_PROMPT
 
+load_dotenv()
 
 async def main():
     memory = MemorySaver()
